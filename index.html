@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Saadiqah Hendricks | Portfolio</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Devicon for skill logos -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <!-- Particles.js -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #0f0c29;
+      color: #fff;
+      scroll-behavior: smooth;
+      position: relative;
+      z-index: 1;
+    }
+
+    #tsparticles {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+    header, section, footer {
+      position: relative;
+      z-index: 1;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    h1, h2, h3, p, a {
+      font-weight: 600;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.7rem 1.5rem;
+      background: #ff00cc;
+      color: #fff;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: 0.3s;
+      font-weight: 700;
+    }
+
+    .btn:hover {
+      background: #3333ff;
+    }
+
+    .skills, .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+      justify-items: center;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 1rem;
+      border-radius: 15px;
+      border: 1px solid rgba(255,255,255,0.2);
+      width: 100%;
+      font-weight: 600;
+    }
+
+    .skill-icon {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    a {
+      color: #7ee8fa;
+    }
+
+    footer p {
+      font-weight: 600;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Animated Background -->
+<div id="tsparticles"></div>
+
+<header>
+  <h1>Saadiqah Hendricks</h1>
+  <p>✨ ICT Applications Development Student | Passionate Learner | Future-Ready Developer</p>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    I’m Saadiqah Hendricks, a dedicated ICT Applications Development student with a big dream and an even bigger drive to make an impact through tech.  
+    I believe in progress, persistence, and using technology to inspire and uplift.  
+    Every day is a new opportunity to learn, grow, and build something meaningful.  
+    Watch this space – I’m just getting started.
+  </p>
+</section>
+
+<section id="skills">
+  <h2>My Skills</h2>
+  <div class="skills">
+    <div class="card"><i class="devicon-java-plain skill-icon"></i><p>Java</p></div>
+    <div class="card"><i class="devicon-html5-plain colored skill-icon"></i><p>HTML</p></div>
+    <div class="card"><i class="devicon-css3-plain colored skill-icon"></i><p>CSS</p></div>
+    <div class="card"><i class="devicon-javascript-plain colored skill-icon"></i><p>JavaScript</p></div>
+    <div class="card"><i class="devicon-python-plain colored skill-icon"></i><p>Python</p></div>
+    <div class="card"><i class="devicon-csharp-plain colored skill-icon"></i><p>C#</p></div>
+    <div class="card"><i class="devicon-mysql-plain colored skill-icon"></i><p>SQL</p></div>
+    <div class="card"><i class="devicon-figma-plain colored skill-icon"></i><p>Figma</p></div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="projects">
+    <div class="card">
+      <h3>Flappy Bird Game</h3>
+      <p>A fun and challenging clone of the classic Flappy Bird game – created using Java and basic GUI elements. This project sharpened my logic and interface-building skills.</p>
+      <a href="https://github.com/SaadiqahHendricks/flappybird" class="btn" target="_blank">View on GitHub</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Let’s Connect</h2>
+  <p>You can find me here:</p>
+  <p>
+    <a href="https://www.linkedin.com/in/saadiqahhendricks" target="_blank">LinkedIn</a> |
+    <a href="https://github.com/SaadiqahHendricks" target="_blank">GitHub</a> |
+    <a href="https://www.instagram.com/saadiqahhendricks1/" target="_blank">Instagram</a>
+  </p>
+</section>
+
+<footer>
+  <p>✨ Dream big. Work hard. Stay curious. <br/> © 2025 Saadiqah Hendricks</p>
+</footer>
+
+<!-- Particles init -->
+<script>
+  tsParticles.load("tsparticles", {
+    fullScreen: { enable: true },
+    particles: {
+      number: { value: 100 },
+      color: { value: "#ffffff" },
+      shape: { type: "circle" },
+      opacity: { value: 0.5 },
+      size: { value: 3 },
+      move: { enable: true, speed: 1, outModes: { default: "bounce" } },
+      links: { enable: true, color: "#ffffff", distance: 150 }
+    },
+    background: { color: "#0f0c29" }
+  });
+</script>
+
+</body>
+</html>
