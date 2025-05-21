@@ -2,98 +2,146 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Saadiqah Hendricks | Portfolio</title>
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
   <!-- Devicon for skill logos -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-  <!-- Particles.js -->
-  <script src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+  <!-- tsparticles library -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 
   <style>
+    /* Reset and base */
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: #0f0c29;
-      color: #fff;
+      background: radial-gradient(circle at top left, #001020, #000010);
+      color: #a0f0ff;
+      overflow-x: hidden;
       scroll-behavior: smooth;
       position: relative;
-      z-index: 1;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Orbitron', sans-serif;
+      color: #00e0ff;
+      letter-spacing: 1.2px;
+      text-shadow: 0 0 8px #00e0ffaa;
+      margin-bottom: 0.5rem;
     }
 
     #tsparticles {
       position: fixed;
+      top: 0; left: 0;
       width: 100%;
       height: 100%;
       z-index: 0;
+      pointer-events: none;
     }
 
     header, section, footer {
       position: relative;
       z-index: 1;
-      padding: 4rem 2rem;
+      padding: 3rem 2rem;
+      max-width: 960px;
+      margin: auto;
       text-align: center;
-    }
-
-    h1, h2, h3, p, a {
-      font-weight: 600;
     }
 
     nav a {
       margin: 0 1rem;
-      color: #fff;
-      text-decoration: none;
+      color: #00d0ff;
       font-weight: 700;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      font-size: 1.1rem;
+    }
+
+    nav a:hover {
+      color: #ff0099;
+      text-shadow: 0 0 10px #ff0099;
     }
 
     .btn {
       display: inline-block;
-      margin-top: 1rem;
-      padding: 0.7rem 1.5rem;
-      background: #ff00cc;
+      margin-top: 1.5rem;
+      padding: 0.7rem 2rem;
+      background: linear-gradient(45deg, #ff00cc, #3333ff);
       color: #fff;
-      border-radius: 10px;
-      text-decoration: none;
-      transition: 0.3s;
+      border: none;
+      border-radius: 16px;
       font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 0 20px #ff00cccc;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      user-select: none;
     }
 
     .btn:hover {
-      background: #3333ff;
+      transform: scale(1.08);
+      box-shadow: 0 0 30px #ff00ccee;
     }
 
     .skills, .projects {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 1.5rem;
       margin-top: 2rem;
       justify-items: center;
     }
 
     .card {
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
-      padding: 1rem;
+      background: rgba(0, 16, 32, 0.75);
       border-radius: 15px;
-      border: 1px solid rgba(255,255,255,0.2);
+      padding: 1.5rem;
+      box-shadow: 0 0 12px #00d0ff66;
+      border: 1px solid #00e0ff55;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
       width: 100%;
-      font-weight: 600;
+      max-width: 320px;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 25px #ff00cccc;
+      border-color: #ff00ccdd;
     }
 
     .skill-icon {
       font-size: 3rem;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.6rem;
+      color: #00e0ff;
+      filter: drop-shadow(0 0 4px #00e0ffcc);
     }
 
     a {
-      color: #7ee8fa;
+      color: #00d0ff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #ff0099;
+      text-shadow: 0 0 10px #ff0099;
     }
 
     footer p {
       font-weight: 600;
       margin-top: 2rem;
+      color: #88ccffaa;
+      font-size: 0.9rem;
+    }
+
+    p {
+      font-weight: 500;
+      line-height: 1.6;
+      color: #a0f0ffcc;
+      max-width: 650px;
+      margin: auto;
     }
   </style>
 </head>
@@ -104,7 +152,7 @@
 
 <header>
   <h1>Saadiqah Hendricks</h1>
-  <p>✨ ICT Applications Development Student | Passionate Learner | Future-Ready Developer</p>
+  <p>ICT: Applications Development | Passionate Learner | Future-Ready Developer</p>
   <nav>
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
@@ -116,9 +164,9 @@
 <section id="about">
   <h2>About Me</h2>
   <p>
-    I’m Saadiqah Hendricks, a dedicated ICT Applications Development student with a big dream and an even bigger drive to make an impact through tech.  
-    I believe in progress, persistence, and using technology to inspire and uplift.  
-    Every day is a new opportunity to learn, grow, and build something meaningful.  
+    I’m Saadiqah Hendricks, a dedicated ICT Applications Development student with a big dream and an even bigger drive to make an impact through tech.
+    I believe in progress, persistence, and using technology to inspire and uplift.
+    Every day is a new opportunity to learn, grow, and build something meaningful.
     Watch this space – I’m just getting started.
   </p>
 </section>
@@ -142,22 +190,21 @@
   <div class="projects">
     <div class="card">
       <h3>Flappy Bird Game</h3>
-      <p>A fun and challenging clone of the classic Flappy Bird game – created using C# and basic Visual Studio Code. </p>
-      <a href="https://github.com/SaadiqahHendricks/flappybird" class="btn" target="_blank">View on GitHub</a>
+      <p>A fun and challenging clone of the classic Flappy Bird game – created using C# and basic Visual Studio Code.</p>
+      <a href="https://github.com/SaadiqahHendricks/flappybird" class="btn" target="_blank" rel="noopener noreferrer">View on GitHub</a>
     </div>
 
     <div class="card">
       <h3>BMI Calculator</h3>
-      <p>A sleek and interactive BMI Calculator built with HTML, CSS, and JavaScript. It calculates BMI and gives instant health status feedback with a modern UI touch. Great for showcasing frontend logic and styling!</p>
-      <a href="https://github.com/SaadiqahHendricks/bmi-calculator" class="btn" target="_blank">View on GitHub</a>
+      <p>A sleek and interactive BMI Calculator built with HTML, CSS, and JavaScript. Calculates BMI and gives instant health status feedback.</p>
+      <a href="https://github.com/SaadiqahHendricks/bmi-calculator" class="btn" target="_blank" rel="noopener noreferrer">View on GitHub</a>
     </div>
 
     <div class="card">
       <h3>HireAHelper</h3>
-      <p>HireAHelper is a smart, location-based application built with Java and React that instantly links clients to reliable service providers nearby — making it easier than ever to get help with everyday tasks.</p>
-      <a href="https://github.com/SaadiqahHendricks/HireAHelper" class="btn" target="_blank">View on GitHub</a>
+      <p>A smart, location-based app built with Java and React. It connects clients with reliable service providers near them.</p>
+      <a href="https://github.com/SaadiqahHendricks/HireAHelper" class="btn" target="_blank" rel="noopener noreferrer">View on GitHub</a>
     </div>
-
   </div>
 </section>
 
@@ -165,9 +212,10 @@
   <h2>Let’s Connect</h2>
   <p>You can find me here:</p>
   <p>
-    <a href="https://www.linkedin.com/in/saadiqahhendricks" target="_blank">LinkedIn</a> |
-    <a href="https://github.com/SaadiqahHendricks" target="_blank">GitHub</a> |
-    <a href="https://www.instagram.com/saadiqahhendricks1/" target="_blank">Instagram</a>
+    <a href="https://www.linkedin.com/in/saadiqahhendricks" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
+    <a href="https://github.com/SaadiqahHendricks" target="_blank" rel="noopener noreferrer">GitHub</a> |
+    <a href="https://www.instagram.com/saadiqahhendricks1/" target="_blank" rel="noopener noreferrer">Instagram</a> |
+    <a href="mailto:saadiqahhendricks2909@gmail.com">saadiqahhendricks2909@gmail.com</a>
   </p>
 </section>
 
@@ -175,20 +223,85 @@
   <p>✨ Dream big. Work hard. Stay curious. <br/> © 2025 Saadiqah Hendricks</p>
 </footer>
 
-<!-- Particles init -->
 <script>
   tsParticles.load("tsparticles", {
-    fullScreen: { enable: true },
-    particles: {
-      number: { value: 100 },
-      color: { value: "#ffffff" },
-      shape: { type: "circle" },
-      opacity: { value: 0.5 },
-      size: { value: 3 },
-      move: { enable: true, speed: 1, outModes: { default: "bounce" } },
-      links: { enable: true, color: "#ffffff", distance: 150 }
+    fpsLimit: 60,
+    background: {
+      color: "transparent"
     },
-    background: { color: "#0f0c29" }
+    particles: {
+      number: {
+        value: 80,
+        density: {
+          enable: true,
+          area: 800
+        }
+      },
+      color: {
+        value: "#00e0ff"
+      },
+      shape: {
+        type: "circle"
+      },
+      opacity: {
+        value: 0.5,
+        random: true,
+        anim: {
+          enable: true,
+          speed: 1,
+          opacity_min: 0.1,
+          sync: false
+        }
+      },
+      size: {
+        value: 3,
+        random: true,
+        anim: {
+          enable: true,
+          speed: 2,
+          size_min: 0.3,
+          sync: false
+        }
+      },
+      move: {
+        enable: true,
+        speed: 1.5,
+        direction: "none",
+        random: false,
+        straight: false,
+        outMode: "out",
+        bounce: false,
+        attract: {
+          enable: false
+        }
+      }
+    },
+    interactivity: {
+      detectsOn: "canvas",
+      events: {
+        onHover: {
+          enable: true,
+          mode: "grab"
+        },
+        onClick: {
+          enable: true,
+          mode: "push"
+        },
+        resize: true
+      },
+      modes: {
+        grab: {
+          distance: 140,
+          line_linked: {
+            opacity: 0.7
+          }
+        },
+        push: {
+          particles_nb: 4
+        }
+      }
+    },
+    detectRetina: true
   });
 </script>
 
