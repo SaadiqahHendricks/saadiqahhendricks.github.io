@@ -9,7 +9,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
   <!-- Devicon for skill logos -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-
   <!-- tsparticles library -->
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 
@@ -155,6 +154,7 @@
   <p>ICT: Applications Development | Passionate Learner | Future-Ready Developer</p>
   <nav>
     <a href="#about">About</a>
+    <a href="#experience">Experience</a>
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
@@ -185,16 +185,56 @@
 <section id="skills">
   <h2>My Skills</h2>
   <div class="skills">
-    <div class="card"><i class="devicon-java-plain skill-icon"></i><p>Java</p></div>
-    <div class="card"><i class="devicon-html5-plain colored skill-icon"></i><p>HTML</p></div>
-    <div class="card"><i class="devicon-css3-plain colored skill-icon"></i><p>CSS</p></div>
-    <div class="card"><i class="devicon-javascript-plain colored skill-icon"></i><p>JavaScript</p></div>
-    <div class="card"><i class="devicon-python-plain colored skill-icon"></i><p>Python</p></div>
-    <div class="card"><i class="devicon-csharp-plain colored skill-icon"></i><p>C#</p></div>
-    <div class="card"><i class="devicon-mysql-plain colored skill-icon"></i><p>SQL</p></div>
-    <div class="card"><i class="devicon-figma-plain colored skill-icon"></i><p>Figma</p></div>
-    <div class="card"><i class="devicon-spring-plain colored skill-icon"></i><p>Spring Boot</p></div>
-    <div class="card"><i class="devicon-react-original colored skill-icon"></i><p>React</p></div>
+    <div class="card" onclick="toggleDescription(this)">
+      <i class="devicon-java-plain skill-icon"></i>
+      <p>Java</p>
+      <div class="skill-description">A high-level, object-oriented programming language used for building robust applications.</div>
+    </div>
+    <div class="card" onclick="toggleDescription(this)">
+      <i class="devicon-html5-plain colored skill-icon"></i>
+      <p>HTML</p>
+      <div class="skill-description">The markup language used to structure content on the web.</div>
+    </div>
+    <div class="card" onclick="toggleDescription(this)">
+      <i class="devicon-css3-plain colored skill-icon"></i>
+      <p>CSS</p>
+      <div class="skill-description">A language that describes how HTML elements are to be displayed.</div>
+    </div>
+    <div class="card" onclick="toggleDescription(this)">
+      <i class="devicon-javascript-plain colored skill-icon"></i>
+      <p>JavaScript</p>
+      <div class="skill-description">A scripting language used to create dynamic and interactive web content.</div>
+    </div>
+    <div class="card" onclick="toggleDescription(this)">
+      <i class="devicon-python-plain colored skill-icon"></i>
+      <p>Python</p>
+      <div class="skill-description">A high-level programming language known for its readability and flexibility.</div>
+    </div>
+    <div class="card" onclick="toggleDescription(this)">
+      <i class="devicon-csharp-plain colored skill-icon"></i>
+      <p>C#</p>
+      <div class="skill-description">A Microsoft-developed language used in enterprise and game development.</div>
+    </div>
+    <div class="card" onclick="toggleDescription(this)">
+      <i class="devicon-mysql-plain colored skill-icon"></i>
+      <p>SQL</p>
+      <div class="skill-description">A standard language for managing and retrieving data from relational databases.</div>
+    </div>
+    <div class="card" onclick="toggleDescription(this)">
+      <i class="devicon-figma-plain colored skill-icon"></i>
+      <p>Figma</p>
+      <div class="skill-description">A cloud-based UI/UX design tool used for interface and prototype design.</div>
+    </div>
+    <div class="card" onclick="toggleDescription(this)">
+      <i class="devicon-spring-plain colored skill-icon"></i>
+      <p>Spring Boot</p>
+      <div class="skill-description">A framework that simplifies building production-ready Java applications.</div>
+    </div>
+    <div class="card" onclick="toggleDescription(this)">
+      <i class="devicon-react-original colored skill-icon"></i>
+      <p>React</p>
+      <div class="skill-description">A JavaScript library for building fast and interactive user interfaces.</div>
+    </div>
   </div>
 </section>
 
@@ -237,84 +277,35 @@
 </footer>
 
 <script>
+  function toggleDescription(card) {
+    const desc = card.querySelector('.skill-description');
+    desc.style.display = (desc.style.display === 'block') ? 'none' : 'block';
+  }
+</script>
+
+<!-- Particles Init -->
+<script>
   tsParticles.load("tsparticles", {
-    fpsLimit: 60,
-    background: {
-      color: "transparent"
-    },
+    background: { color: { value: "#000010" } },
     particles: {
-      number: {
-        value: 80,
-        density: {
-          enable: true,
-          area: 800
-        }
-      },
-      color: {
-        value: "#00e0ff"
-      },
-      shape: {
-        type: "circle"
-      },
-      opacity: {
-        value: 0.5,
-        random: true,
-        anim: {
-          enable: true,
-          speed: 1,
-          opacity_min: 0.1,
-          sync: false
-        }
-      },
-      size: {
-        value: 3,
-        random: true,
-        anim: {
-          enable: true,
-          speed: 2,
-          size_min: 0.3,
-          sync: false
-        }
-      },
-      move: {
+      number: { value: 100 },
+      size: { value: 2 },
+      move: { enable: true, speed: 0.5 },
+      color: { value: "#00d0ff" },
+      opacity: { value: 0.6 },
+      links: {
         enable: true,
-        speed: 1.5,
-        direction: "none",
-        random: false,
-        straight: false,
-        outMode: "out",
-        bounce: false,
-        attract: {
-          enable: false
-        }
+        color: "#00e0ff",
+        distance: 80,
+        opacity: 0.4
       }
     },
     interactivity: {
-      detectsOn: "canvas",
       events: {
-        onHover: {
-          enable: true,
-          mode: "grab"
-        },
-        onClick: {
-          enable: true,
-          mode: "push"
-        },
-        resize: true
-      },
-      modes: {
-        grab: {
-          distance: 140,
-          line_linked: {
-            opacity: 0.7
-          }
-        },
-        push: {
-          particles_nb: 4
-        }
+        onhover: { enable: true, mode: "repulse" },
+        onclick: { enable: true, mode: "push" }
       }
-    },
-    detectRetina: true
+    }
   });
 </script>
 
